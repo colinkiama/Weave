@@ -17,12 +17,16 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <ListView ItemContainerStyle="{StaticResource TabListViewItemStyle}"
-                                      Padding="8,0,0,0">
+                                      Padding="8,0,0,0"
+                                      x:Name="TabsListView">
                                 <ListView.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <StackPanel Orientation="Horizontal"/>
                                     </ItemsPanelTemplate>
                                 </ListView.ItemsPanel>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate></DataTemplate>
+                                </ListView.ItemTemplate>
                                 <ListViewItem>
                                     Hey
                                 </ListViewItem>
