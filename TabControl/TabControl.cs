@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TabControl.Exceptions;
 using TabControl.Interfaces;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;

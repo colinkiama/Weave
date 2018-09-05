@@ -19,28 +19,18 @@
                             <ListView ItemContainerStyle="{StaticResource TabListViewItemStyle}"
                                       Padding="8,0,0,0"
                                       x:Name="TabsListView"
-                                      ItemTemplate="{Binding TabItemTemplate}"
+                                      ItemTemplate="{TemplateBinding TabItemTemplate}"
                                       IsItemClickEnabled="True"
-                                      SelectionMode="Single">
+                                      SelectionMode="Single"
+                                      ItemsSource="{TemplateBinding TabsItemSource}">
                                 <ListView.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <StackPanel Orientation="Horizontal"/>
                                     </ItemsPanelTemplate>
                                 </ListView.ItemsPanel>
-                                <ListViewItem>
-                                    Hey
-                                </ListViewItem>
-                                <ListViewItem>
-                                    Hi
-                                </ListViewItem>
-                                <ListViewItem>
-                                    Hello
-                                </ListViewItem>
-                                <ListViewItem>
-                                    Sonic Adventure 3
-                                </ListViewItem>
+                               
                             </ListView>
-                            <ContentPresenter Grid.Row="1" Background="Blue"/>
+                            <ContentPresenter Grid.Row="1"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>
