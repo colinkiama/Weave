@@ -58,6 +58,22 @@ namespace TabControl
         protected override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
+            var listView = this.GetTemplateChild("TabsListView") as ListView;
+            ListenToListViewEvents(listView);
         }
+
+        private void ListenToListViewEvents(ListView listView)
+        {
+            listView.ItemClick += ListView_ItemClick;
+        }
+
+        #region Event Methods
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        #endregion
     }
 }

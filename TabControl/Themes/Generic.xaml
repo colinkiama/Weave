@@ -19,7 +19,9 @@
                             <ListView ItemContainerStyle="{StaticResource TabListViewItemStyle}"
                                       Padding="8,0,0,0"
                                       x:Name="TabsListView"
-                                      ItemTemplate="{Binding TabItemTemplate}">
+                                      ItemTemplate="{Binding TabItemTemplate}"
+                                      IsItemClickEnabled="True"
+                                      SelectionMode="Single">
                                 <ListView.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <StackPanel Orientation="Horizontal"/>
