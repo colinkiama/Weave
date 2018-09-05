@@ -42,9 +42,6 @@ namespace TabControl
         internal static DependencyProperty TabsItemSourceProperty { get; } =
             DependencyProperty.Register("TabsItemSource", typeof(object), typeof(TabControl), new PropertyMetadata(null));
 
-
-
-
         public DataTemplate TabItemTemplate
         {
             get { return (DataTemplate)GetValue(TabItemTemplateProperty); }

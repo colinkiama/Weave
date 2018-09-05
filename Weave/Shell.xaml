@@ -11,7 +11,6 @@
 
     <Grid>
         <tabcontrol:TabControl>
-            
         </tabcontrol:TabControl>
     </Grid>
 </Page>
