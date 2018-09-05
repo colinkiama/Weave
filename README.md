@@ -4,4 +4,4 @@
 Readme will be updated in time...
 
 ### Progress so far:
-![Progress](img/WeaveWorkingTabs.png)
+![Working tabs!](img/WeaveWorkingTabs.png)
