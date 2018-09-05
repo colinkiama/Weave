@@ -107,7 +107,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Exceptions\NotTabableException.cs" />
+    <Compile Include="Interfaces\ITabable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TabControl.cs" />
   </ItemGroup>

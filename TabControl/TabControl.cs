@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TabControl.Exceptions;
+using TabControl.Interfaces;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
@@ -13,7 +15,7 @@ using Windows.UI.Xaml.Media;
 
 namespace TabControl
 {
-    public sealed class TabControl : Control
+    public sealed class TabControl : ContentControl
     {
         public TabControl()
         {
@@ -71,9 +73,14 @@ namespace TabControl
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            if (e.ClickedItem is ITabable clickedTab)
+            {
+                Content = clickedTab.GetTabContent();
+            }
         }
 
         #endregion
+
+
     }
 }

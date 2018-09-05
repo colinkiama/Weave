@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TabControl
+namespace TabControl.Interfaces
 {
-    public sealed class Class1
+    public interface ITabable
     {
-
+        object GetTabContent();         
     }
 }
