@@ -61,12 +61,28 @@ namespace TabControl
             base.OnApplyTemplate();
             var listView = this.GetTemplateChild("TabsListView") as ListView;
             ListenToListViewEvents(listView);
+            if (listView.Items.Count > 0)
+            {
+                listView.SelectedIndex = 0;
+            }
         }
 
         private void ListenToListViewEvents(ListView listView)
         {
+            listView.SelectionChanged += ListView_SelectionChanged;
             listView.ItemClick += ListView_ItemClick;
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                if (e.AddedItems[0] is ITabable clickedTab)
+                {
+                    Content = clickedTab.GetTabContent();
+                }
+            }
+       }
 
         #region Event Methods
 
